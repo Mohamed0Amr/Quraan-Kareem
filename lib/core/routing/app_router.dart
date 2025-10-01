@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quraankareem/core/routing/routes.dart';
-import 'package:quraankareem/features/home/home_screen.dart';
+import 'package:quraankareem/features/home/ui/home_screen.dart';
 
 class AppRouter {
   Route generateRoute(RouteSettings settings) {
