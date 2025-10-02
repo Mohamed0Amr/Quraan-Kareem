@@ -37,6 +37,41 @@ android {
             signingConfig = signingConfigs.getByName("debug")
         }
     }
+    //     ...
+    // flavorDimensions += "default"
+    // productFlavors  {
+    //     create("production") {
+    //         dimension = "default"
+    //         applicationIdSuffix = ".prod"
+    //         resValue "string", "app_name", "Quran Kareem (Production)"
+    //     }
+    //     create("development") {
+    //         dimension = "default"
+    //         applicationIdSuffix = ".dev"
+    //         resValue "string", "app_name", "Quran Kareem (Development)"
+    //     }
+    // }
+
+    flavorDimensions += "default"
+    productFlavors {
+        create("production") {
+            dimension = "default"
+            resValue(
+                type = "string",
+                name = "app_name",
+                value = "َQuran Kareem Production")
+            applicationIdSuffix = ".production"
+        }
+        create("development") {
+            dimension = "default"
+            resValue(
+                type = "string",
+                name = "app_name",
+                value = "َQuran Kareem Development")
+            applicationIdSuffix = ".development"
+        }
+    }
+
 }
 
 flutter {
