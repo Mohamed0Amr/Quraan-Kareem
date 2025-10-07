@@ -4,6 +4,11 @@ import 'package:quraankareem/core/theming/colors.dart';
 import 'package:quraankareem/core/theming/font_weight_helper.dart';
 
 class TextStyles {
+   static TextStyle font18BlackMedium = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: Colors.black,
+  );
   static TextStyle font24BlackBold = TextStyle(
     fontSize: 24.sp,
     fontWeight: FontWeightHelper.bold,

@@ -32,7 +32,7 @@ dependencies:
     sdk: flutter
   audioplayers: ^6.0.0 # For recitation audio
   cupertino_icons: ^1.0.2
-  build_runner: ^2.4.7
+  build_runner: ^2.9.0
   flutter_bloc: ^9.1.1
   freezed: ^3.2.0
   freezed_annotation: ^3.1.0
