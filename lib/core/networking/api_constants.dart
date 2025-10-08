@@ -2,6 +2,8 @@ class ApiConstants {
   static const String apiBaseUrl = 'http://api.alquran.cloud/v1/';
   // اسماء السور
   static const String nameOfAyaat = '/meta';
+  // conent of surah
+  static const String contentOfSurah = '/quran/ar.alafasy';
 }
 
 class ApiErrors {

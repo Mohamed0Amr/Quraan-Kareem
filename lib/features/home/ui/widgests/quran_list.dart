@@ -22,6 +22,7 @@ class _QuranListState extends State<QuranList> {
         backgroundColor: Colors.white,
         body: Column(
           children: [
+            verticalSpace(10.h),
             // Tabs
             Container(
               margin: EdgeInsets.symmetric(horizontal: 16.h),
@@ -31,44 +32,6 @@ class _QuranListState extends State<QuranList> {
               ),
               child: Row(
                 children: [
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () => setState(() => selectedTab = 0),
-                      child: Container(
-                        padding: EdgeInsets.symmetric(vertical: 12.w),
-                        decoration: BoxDecoration(
-                          color: selectedTab == 0
-                              ? Colors.green
-                              : Colors.transparent,
-                          borderRadius: BorderRadius.circular(12.r),
-                        ),
-                        child: Center(
-                          child: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Icon(
-                                Icons.headphones,
-                                size: 20.w,
-                                color: selectedTab == 0
-                                    ? Colors.white
-                                    : Colors.black,
-                              ),
-                              horizontalSpace(5.w),
-                              Text(
-                                "التلاوات",
-                                style: TextStyle(
-                                  color: selectedTab == 0
-                                      ? Colors.white
-                                      : Colors.black,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
                   Expanded(
                     child: GestureDetector(
                       onTap: () => setState(() => selectedTab = 1),
@@ -107,10 +70,48 @@ class _QuranListState extends State<QuranList> {
                       ),
                     ),
                   ),
+                            Expanded(
+                    child: GestureDetector(
+                      onTap: () => setState(() => selectedTab = 0),
+                      child: Container(
+                        padding: EdgeInsets.symmetric(vertical: 12.w),
+                        decoration: BoxDecoration(
+                          color: selectedTab == 0
+                              ? Colors.green
+                              : Colors.transparent,
+                          borderRadius: BorderRadius.circular(12.r),
+                        ),
+                        child: Center(
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(
+                                Icons.headphones,
+                                size: 20.w,
+                                color: selectedTab == 0
+                                    ? Colors.white
+                                    : Colors.black,
+                              ),
+                              horizontalSpace(5.w),
+                              Text(
+                                "التلاوات",
+                                style: TextStyle(
+                                  color: selectedTab == 0
+                                      ? Colors.white
+                                      : Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
-
+            verticalSpace(10.h),
             // Content (widget switching)
             Expanded(
               child: selectedTab == 0
