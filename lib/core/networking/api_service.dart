@@ -13,4 +13,8 @@ abstract class ApiService {
   /// 🕌 Get the list of Surahs (Ayaat names)
   @GET(ApiConstants.nameOfAyaat)
   Future<AyaatResponse> getAyaatNames();
+
+  // /// 🕋 Get the verses of a specific Surah by its number
+  // @GET(ApiConstants.contentOfSurah)
+  // Future<AyaatResponse> getSurahContent();
 }

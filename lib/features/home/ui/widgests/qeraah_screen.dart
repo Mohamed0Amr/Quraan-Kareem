@@ -15,9 +15,7 @@ class QeraahScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) {
-        final cubit = AyaatCubit(
-          AyaatRepo(ApiService(DioFactory.getDio())),
-        );
+        final cubit = AyaatCubit(AyaatRepo(ApiService(DioFactory.getDio())));
         // Call API immediately when cubit is created
         cubit.emitAyaatState(
           AyaatRequest(number: 0, name: '', engName: '', revelationType: ''),
@@ -40,13 +38,29 @@ class QeraahScreen extends StatelessWidget {
                 itemCount: surahList.length,
                 itemBuilder: (context, index) {
                   final surah = surahList[index];
-                  return ListTile(
-                    leading: Text('${surah.number}'),
-                    title: Text(
-                      surah.name ?? '',
-                      style: TextStyles.font24BlackBold,
+                  final isEven = index % 2 == 0; // 👈 Check if index is even
+
+                  return Container(
+                    color: isEven
+                        ? Colors.white
+                        : Colors.grey[200], // 👈 alternate background
+                    child: ListTile(
+                      // leading: Text(
+                      //   '${surah.number}',
+                      //   style: const TextStyle(fontWeight: FontWeight.bold),
+                      // ),
+                      title: Text(
+                        surah.name ?? '',
+                        style: TextStyles.font20BlackBold,
+                      ),
+                      subtitle: Directionality(
+                        textDirection: TextDirection.ltr,
+                        child: Text(
+                          surah.englishName ?? '',
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
                     ),
-                    subtitle: Text(surah.englishName ?? ''),
                   );
                 },
               );

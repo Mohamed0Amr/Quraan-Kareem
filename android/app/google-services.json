@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1022233492245",
+    "project_id": "quraankareem-app",
+    "storage_bucket": "quraankareem-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1022233492245:android:fbd182cdc6f4c3a58f471c",
+        "android_client_info": {
+          "package_name": "com.example.quraankareem"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7sZr_FbNPn_NVcSBEKZ8Prjy4MY8jwac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

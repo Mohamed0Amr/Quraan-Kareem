@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quraankareem/core/helpers/spacing.dart';
 import 'package:quraankareem/core/theming/styles.dart';
 import 'package:quraankareem/features/home/ui/widgests/quran_list.dart';
-
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -11,15 +9,13 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'القرآن الكريم',
-          style: TextStyles.font18BlackMedium,
-        ),
+        title: Text('القرآن الكريم', style: TextStyles.font18BlackMedium),
         centerTitle: true,
         automaticallyImplyLeading: false,
         elevation: 0,
+        backgroundColor: Colors.white,
       ),
-         body: const QuranList(), // ✅ Call the widget here
+      body: const QuranList(),
     );
   }
 }
