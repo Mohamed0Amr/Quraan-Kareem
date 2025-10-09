@@ -9,6 +9,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        // 
         title: Text('القرآن الكريم', style: TextStyles.font18BlackMedium),
         centerTitle: true,
         automaticallyImplyLeading: false,
