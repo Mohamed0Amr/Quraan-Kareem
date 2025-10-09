@@ -9,7 +9,7 @@ jobs:
   distribute_to_firebase:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout my repo code.
+    - name: Checkout my repo code
       uses: actions/checkout@v2
     
     - name: Set up JDK 11
@@ -26,7 +26,7 @@ jobs:
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: "3.4.7"
+        ruby-version: "3.4.5"
         bundler-cache: true
         working-directory: android
         
